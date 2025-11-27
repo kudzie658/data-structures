@@ -1,16 +1,15 @@
 #include <iostream>
 #include"Linkedlist.hpp"
+#include"Array.hpp"
 
 int main() {
-							
-							Linkedlist<int>* list = new Linkedlist<int>(10);
-							list->add(11);
-							list->add(12);
-							list->add(12);
-							
-							std::cout<<list->getSize()<<std::endl;
-							
-							list->display();
-							
-							return 0;
+	
+	Array<int,5> numbers = {5,8,9,7,4};
+	
+	for(auto itr = numbers.begin(); itr != numbers.end(); itr++)
+	{
+		std::cout<<*itr<<std::endl;
+	}
+    
+	return 0;
 }

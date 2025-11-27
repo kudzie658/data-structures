@@ -101,14 +101,7 @@ bool Linkedlist<T>::remove(T data)
 
     // remove head
     if (list->data == data)
-    {
-        Node<T>* old = list;
-        list = list->next;
-        delete old;
-        size--;
-        update_positions();
-        return true;
-    }
+        return removeAt(1);
 
     Node<T>* current = list;
 
